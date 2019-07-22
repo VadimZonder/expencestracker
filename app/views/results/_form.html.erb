@@ -36,13 +36,10 @@
           <%= f.datetime_select :date_time, required: true %>
         </div>
         <div class="field">
-          <%= f.label :classes, "Subjects"  %><br>
+          <%= f.label :classes, "What"  %><br>
           <%= f.select :classes,
-            ['Accounting', 'Applied Maths', 'Applied Science','Art','Biology', 'Business Studies','Chemistry','English','French',
-            'Geography','German','History','Home Economics','Information Technology', 'Irish','Maths', 'Music', 
-            'Physical Education', 'Physics',  'Religion', 'Science', 'Sex Education','Spanish','Technology', 
-            'Tecnology and Design',  'Technical Graphics','Other Subject 1', 'Other Subject 2','Other Subject 3',
-            'Other Language 1','Othe Language 2', 'Othe Language 3'
+            ['Electricity Bills', 'Clothes', 'Commuting', 'Credit','Food','Fuel', 'Rent','Leasure','Other1','Other2',
+            'Other3','Other4','Other5','Other6','Other7', 'Other8','Other9'
              ] %>
         </div>
       
@@ -53,8 +50,8 @@
           <%= f.text_field :teacher, :value => @user_name, required: true, :readonly => true  %>
         </div>
         <div class="field">
-          <%= f.label :grade %><br>
-          <%= f.number_field :grade, min: 1, max: 100, required: true %>
+          <%= f.label :grade, "How Much" %><br>
+          <%= f.number_field :grade, min: 1, max: 10000000, required: true %>
         </div>
         <div class="field">
           <%= f.label :email %><br>
@@ -73,15 +70,14 @@
           <%= f.text_field :comment %>
         </div>
         <div class="actions">
-          <%= f.submit 'Create Result', class: "btn purple-button" %>
+          <%= f.submit 'Add Expences', class: "btn purple-button" %>
         </div>
       <% end %>
       
        <div class="field">
          <tr>
-
  <th> <p><%= link_to("Back", "https://schoolapple.herokuapp.com/results/teacher_result/#{$studentEmail}") %></p></th>
-    <!-- deploy version   
+     <!-- deploy version   
          <!-- changing the back button to lead back to a particular student's result-->      
           <th> <p><%#= link_to("Back", "https://ejournal-reloaded-vadimmalakhovski.c9users.io/results/teacher_result/#{$studentEmail}") %></p></th>
        </tr> 

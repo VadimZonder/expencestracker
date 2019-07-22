@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
     
+  resources :expenses
     resources :students do 
         resources :results
     end

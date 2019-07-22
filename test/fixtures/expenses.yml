@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_time: 2019-07-22 19:18:29
+  name: MyString
+  description: MyString
+  value: 9.99
+  email: MyString
+
+two:
+  date_time: 2019-07-22 19:18:29
+  name: MyString
+  description: MyString
+  value: 9.99
+  email: MyString

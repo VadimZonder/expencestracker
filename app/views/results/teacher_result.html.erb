@@ -19,7 +19,7 @@
                     <% if @results.length == 0 %>
                     
                     <h3 class="title text-warning">There are no results yet added for this student</h3>
-                    <h5 class="category"><%= link_to 'Add A New Result', new_result_path, class: "btn purple-button"  %></h5>
+                    <h5 class="category"><%= link_to 'Add an Expence', new_result_path, class: "btn purple-button"  %></h5>
                     <br>
                     <p><%= link_to("Back", students_url) %></p>
                 </div>
@@ -28,7 +28,7 @@
         </div>
         <% else %>
         <h2 class="title">Grades</h2>
-        <h5 class="category"><%= link_to 'Add A New Result', new_result_path, class: "btn purple-button"  %></h5>
+        <h5 class="category"><%= link_to 'Add an Expence', new_result_path, class: "btn purple-button"  %></h5>
         <br>
         <p><%= link_to("Back", students_url) %></p>
         
