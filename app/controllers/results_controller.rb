@@ -58,7 +58,7 @@ class ResultsController < ApplicationController
   end
   
   def teacher_result
-  
+  ##Result.last.destroy
     #get student's email backup method - also working but since global vars are not adivesed then other one is preffered.
     #needed for destroy redirection to the right student
       #this code is to get back to an appriopriate place
@@ -77,10 +77,10 @@ class ResultsController < ApplicationController
     @URI = @URI.to_s
     
     #searching the DB to match all the results of a student with the unique email and displaying newst first
-     @results= Result.order("created_at DESC").where("email like ? ", @URI)
+     @results= Result.order("created_at DESC").where("email like ? ", @user_email)
     
     #try change to just @resilts and to = Result.where("email like ? ",st)
-      @resultsChart= Result.where("email like ? ",@URI)
+      @resultsChart= Result.where("email like ? ",@user_email)
   end
 
   # GET /results/1

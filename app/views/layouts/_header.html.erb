@@ -65,7 +65,8 @@
                     <!--<a class="navbar-brand" href="#">Dashboard</a>-->
                     <!-- headers-->
                     <!--going back-->
-                    <a class="navbar-brand" href="https://schoolapple.herokuapp.com">
+<a class="navbar-brand" href="http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/results/teacher_result/<%= @user_email%>">
+                 <!--   <a class="navbar-brand" href="https://schoolapple.herokuapp.com/results/teacher_result/<%#= @user_email%>">-->
                         <p class="font-weight-bold"><i class="fa fa-home"></i>  <%=" Home" %></p>
 
 
@@ -82,8 +83,8 @@
                         <% if current_user%> 
                         <li>
 
-
-                            <a href="https://schoolapple.herokuapp.com/users/<%= @user_id%>/edit">
+  <a href="http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/users/<%= @user_id%>/edit">
+                          <!--  <a href="https://schoolapple.herokuapp.com/users/<%#= @user_id%>/edit">-->
 
                                 <%#=link_to "Welcome:   #{@user_name}", "https://deploy-vadimmalakhovski.c9users.io/users/#{@user_id}/edit" %>  <!--fix, this will be displayed on most of the pages so need in controllers , edit_user_path(@user) -->
                                 <%#activate when deploying%>
@@ -94,7 +95,8 @@
                         </li>
 
                         <li >
-                            <a href="https://schoolapple.herokuapp.com/logout">
+                           <a href="http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/logout">
+                          <!--  <a href="https://schoolapple.herokuapp.com/logout">-->
 
                                 <p  class="float-left"> <i class="fa fa-power-off"></i><%= "     Log Out"%></p>
                             </a>
@@ -103,14 +105,16 @@
 
                         <%else%>
                         <li>
-                            <a href="https://schoolapple.herokuapp.com/signup" >
+                            <a href="http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/signup" >
+                           <!-- <a href="https://schoolapple.herokuapp.com/signup" >-->
 
                                 <p ><i class="fa fa-user-plus"></i><%=" Register"%></p>
                             </a>
                         </li>
 
                         <li>
-                            <a href="https://schoolapple.herokuapp.com/login">
+                            <a href="http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/login">
+                           <!-- <a href="https://schoolapple.herokuapp.com/login">-->
 
                                 <p><i class="fa fa-user-o"></i> <%=" Login"%></p>
                             </a>
@@ -123,4 +127,7 @@
 
                 </div>
             </div>
+            
         </nav>
+        
+
