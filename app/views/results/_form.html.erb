@@ -57,13 +57,13 @@
           <%= f.label :email %><br>
           <!-- pre filling with the right email-->
           <!-- read only for the email to be visible but cannot be change to avoid mistakes-->
-          <%= f.text_field :email, :value => $studentEmail, required: true, :readonly => true  %>
+          <%= f.text_field :email, :value => @user_email, required: true, :readonly => true  %>
         </div>
         <div class="field">
           <%= f.label :behaviour %><br>
           <!-- setting up limitters in order to avoid user input mistakes-->
           <!-- setting require to true to avoid empty values-->
-          <%= f.number_field :behaviour, min: 1, max: 10, required: true %>
+          <%= f.number_field :behaviour, min: 1, max: 10%>
         </div>
         <div class="field">
           <%= f.label :comment, "Comment (on behaviour)"  %><br>
@@ -76,7 +76,7 @@
       
        <div class="field">
          <tr>
- <th> <p><%= link_to("Back", "https://schoolapple.herokuapp.com/results/teacher_result/#{$studentEmail}") %></p></th>
+ <th> <p><%= link_to("Back", "http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/results/teacher_result/#{$studentEmail}") %></p></th>
      <!-- deploy version   
          <!-- changing the back button to lead back to a particular student's result-->      
           <th> <p><%#= link_to("Back", "https://ejournal-reloaded-vadimmalakhovski.c9users.io/results/teacher_result/#{$studentEmail}") %></p></th>

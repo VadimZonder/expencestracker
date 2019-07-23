@@ -67,6 +67,7 @@ class ResultsController < ApplicationController
       #geting the email of the current student being worked on
       #bu splittin the URI into an array and getting the last element which would be an email
       $studentEmail =  $studentEmail.split('/')[-1]
+      $userEmail = @user_email
      
       
     #results for parents. Here is simplified because there was no need for extra steps like in index
@@ -122,7 +123,7 @@ class ResultsController < ApplicationController
          #change on deployment 
          #format.html { redirect_to "https://schoolapple.herokuapp.com/results/teacher_result/#{$studentEmail}", notice: 'Result was successfully created.' }
          #format.html { redirect_to "https://deploy-vadimmalakhovski.c9users.io/results/teacher_result/#{$studentEmail}", notice: 'Result was successfully created.' }        
-         format.html { redirect_to "http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/results/teacher_result/#{$studentEmail}", notice: 'Result was successfully created.' }
+         format.html { redirect_to "http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/results/teacher_result/#{$userEmail}", notice: 'Result was successfully created.' }
          format.json { render :show, status: :created, location: @result }
       else
          format.html { render :new }
@@ -145,7 +146,7 @@ class ResultsController < ApplicationController
         #format.html { redirect_to "https://schoolapple.herokuapp.com/results/teacher_result/#{$studentEmail}", notice: 'Result was successfully created.' }
         #format.html { redirect_to "https://deploy-vadimmalakhovski.c9users.io/results/teacher_result/#{$studentEmail}", notice: 'Result was successfully updated.' }
 
-        format.html { redirect_to "http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/results/teacher_result/#{$studentEmail}", notice: 'Result was successfully created.' }
+        format.html { redirect_to "http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/results/teacher_result/#{$userEmail}", notice: 'Result was successfully created.' }
         format.json { render :show, status: :ok, location: @result }
       else
         format.html { render :edit }
@@ -170,7 +171,7 @@ class ResultsController < ApplicationController
       #format.html { redirect_to "https://e-schoolapple.herokuapp.com/results/teacher_result/#{$studentEmail}", notice: 'Result was successfully created.' }
       # format.html { redirect_to "https://deploy-vadimmalakhovski.c9users.io/results/teacher_result/#{$studentEmail}", notice: 'Result was successfully destroyed.' }
 
-      format.html { redirect_to "http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/results/teacher_result/#{$studentEmail}", notice: 'Result was successfully created.' }
+      format.html { redirect_to "http://f0759701829b460daf72059472399dc2.vfs.cloud9.us-east-1.amazonaws.com/results/teacher_result/#{$userEmail}", notice: 'Result was successfully created.' }
       format.json { head :no_content }
     end
   end
