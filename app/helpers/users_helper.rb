@@ -16,6 +16,7 @@ module UsersHelper
       
      @user_email = User.find_by(id: session[:user_id]).email
      @user_id= User.find_by_email(@user_email).id
+     @domainName = request.domain
      return true
     else 
    # @sign_in=false
