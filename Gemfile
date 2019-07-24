@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
-ruby "2.3.4"
+
+#ruby "2.3.4"
+ruby "2.4.6"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.7.1'
+##gem 'rails', '4.2.7.1'
+gem 'rails', '4.2.8'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: [:development, :test]
 	
@@ -43,12 +46,12 @@ gem 'groupdate', '~> 3.2.0'
 gem 'active_median', '~> 0.1.0'
 
 #google natural language
-gem "google-cloud-language"
+##gem "google-cloud-language"
 
-group :test do
-  gem "rspec"
-  gem "google-cloud-storage"
-end
+##group :test do
+##  gem "rspec"
+##  gem "google-cloud-storage"
+##end
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 #
