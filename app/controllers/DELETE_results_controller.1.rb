@@ -41,6 +41,21 @@ class ResultsController < ApplicationController
     @resultsChart= Result.where("email like ? ", @emailFinal)
   end
   
+  def parent_result
+    
+    #results for parents. Here is simplified because there was no need for extra steps like in index
+    @URI = request.original_url
+    #split the URI to get everything after the / sign
+    @URI = @URI.split('/').last
+    @URI = @URI.to_s
+   
+    #searching the DB to match all the results of a student with the unique email and displaying newst first
+     @results= Result.order("created_at DESC").where("email like ? ", @URI)
+    
+    
+    #try change to just @resilts and to = Result.where("email like ? ",st)
+      @resultsChart= Result.where("email like ? ", @URI)
+  end
   
   def teacher_result
   ##Result.last.destroy

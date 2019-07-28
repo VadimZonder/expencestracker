@@ -1,11 +1,14 @@
-<head>
-  <title><%= yield(:title) %>Expences Dashboard</title>
-</head>
-<!-- the same applies to the rest of the code. The elemets that I've already declare that are comming form the template are similar below-->
+  <head>
+      <title><%= yield(:title) %>Expences Dashboard</title>
+  </head>
+  <!-- the same applies to the rest of the code. The elemets that I've already declare that are comming form the template are similar below-->
+  
 
+<!-- Google Natural Language API-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.4/jquery.min.js"></script>
 
-<%= render 'layouts/header' %>
-<%# make divs stack upon one another%>
+ <%= render 'layouts/header' %>
+  <%# make divs stack upon one another%>
 <p id="notice"><%= notice %></p>
 
 <div class="content">
@@ -73,7 +76,9 @@
                                 <!--changing css left right center + deleteing some fields-->
                                 <th class="text-left">Date time</th>
                                 <th class="text-center">Subject</th>
-                                <th class="text-center">Cost</th>
+                                <th class="text-center">Teacher</th>
+                                <th class="text-center">Grade 1-100</th>
+                                <th class="text-center">Behaviour</th>
                                 <th class="text-center">Comment</th>
                                 <th class="text-center">Edit / Destroy</th>
                             </tr>
@@ -84,7 +89,9 @@
                             <tr>
                                 <td class="text-left"><%= result.date_time.strftime("%d/%m/%Y at %H:%M") %></td>
                                 <td class="text-center"><%= result.classes %></td>
+                                <td class="text-center"><%= result.teacher %></td>
                                 <td class="text-center"><%= result.grade %></td>
+                                <td class="text-center"><%= result.behaviour %></td>
                                 <td class="text-center"><%= result.comment %></td>
                                 <td class="text-center">
                                     <%= link_to 'Edit', edit_result_path(result) %>   /
@@ -95,6 +102,9 @@
                         </table>
                         <% end %>
                     </div>
+                    
                 </div>
-            </div>
-        </div>
+                
+                
+                
+           
