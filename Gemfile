@@ -39,7 +39,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 
 #Gems for charts/analysis________
-gem 'chartkick', '~> 1.2.4'
+gem 'chartkick', '~> 3.3.0'
 gem 'highcharts-rails'
 gem 'groupdate', '~> 3.2.0'
 gem 'active_median', '~> 0.1.0'
